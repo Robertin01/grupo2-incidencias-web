@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
 import './App.css';
+import Login from './logica/Login';
 import RegistrarIncidencia from './logica/RegistrarIncidencia';
 
 function App() {
+  const [estaLogueado, setEstaLogueado] = useState(false);
   const [incidencias, setIncidencias] = useState([]);
 
+  const handleLogin = () => {
+    setEstaLogueado(true);
+  };
+
   const handleRegistrarIncidencia = (incidencia) => {
-    // Almacenar la incidencia en la variable de estado
     setIncidencias([...incidencias, incidencia]);
-    // Aquí se puede pasar el array de incidencias a otro componente cuando sea necesario
     console.log('Incidencia registrada:', incidencia);
     console.log('Total de incidencias:', incidencias.length + 1);
   };
+
+  if (estaLogueado === false) {
+    return <Login onLogin={handleLogin} />;
+  }
 
   return (
     <div className="App">
