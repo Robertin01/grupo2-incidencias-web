@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import RegistrarIncidencia from './logica/RegistrarIncidencia';
+import VerIncidencias from './VerIncidencias';
 
 function App() {
   const [incidencias, setIncidencias] = useState([]);
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <RegistrarIncidencia onRegistrar={handleRegistrarIncidencia} />
+      <VerIncidencias />
     </div>
   );
 }
