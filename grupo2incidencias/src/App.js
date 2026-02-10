@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Login from './logica/Login';
 import RegistrarIncidencia from './logica/RegistrarIncidencia';
+import VerIncidencias from './listadoincidencias/VerIncidencias';
 
 function App() {
   const [estaLogueado, setEstaLogueado] = useState(false);
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <RegistrarIncidencia onRegistrar={handleRegistrarIncidencia} />
+      <VerIncidencias />
     </div>
   );
 }

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "titulo": "No funciona el ratón",
+    "descripcion": "El ratón óptico no se mueve",
+    "categoria": "Hardware",
+    "urgencia": "Baja",
+    "ubicacion": "Aula 2",
+    "estado": "Abierta",
+    "fecha": "10/02/2026"
+  },
+  {
+    "id": 2,
+    "titulo": "Error de login",
+    "descripcion": "No reconoce la contraseña del alumno",
+    "categoria": "Software",
+    "urgencia": "Alta",
+    "ubicacion": "Aula 5",
+    "estado": "En proceso",
+    "fecha": "10/02/2026"
+  },
+  {
+    "id": 3,
+    "titulo": "Sin internet",
+    "descripcion": "El cable de red parece estar cortado",
+    "categoria": "Red",
+    "urgencia": "Alta",
+    "ubicacion": "Biblioteca",
+    "estado": "Abierta",
+    "fecha": "11/02/2026"
+  },
+  {
+    "id": 4,
+    "titulo": "Fallo impresora",
+    "descripcion": "Atasco de papel constante",
+    "categoria": "Hardware",
+    "urgencia": "Normal",
+    "ubicacion": "Secretaría",
+    "estado": "Resuelta",
+    "fecha": "11/02/2026"
+  }
+]
