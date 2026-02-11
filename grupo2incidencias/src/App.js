@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
 import './App.css';
 import Login from './logica/Login';
-import RegistrarIncidencia from './logica/RegistrarIncidencia';
-import VerIncidencias from './listadoincidencias/VerIncidencias';
+import PantallaPrincipal from './logica/PantallaPrincipal';
+
 
 function App() {
-  const [estaLogueado, setEstaLogueado] = useState(false);
-  const [incidencias, setIncidencias] = useState([]);
+  const [userRole, setUserRole] = useState(null); 
 
-  const handleLogin = () => {
-    setEstaLogueado(true);
+  // Guardar si el inicio es admin o comun
+  const handleLogin = (rol) => {
+    setUserRole(rol); 
   };
 
-  const handleRegistrarIncidencia = (incidencia) => {
-    setIncidencias([...incidencias, incidencia]);
-    console.log('Incidencia registrada:', incidencia);
-    console.log('Total de incidencias:', incidencias.length + 1);
+  const handleLogout = () => {
+    setUserRole(null);
   };
 
-  if (estaLogueado === false) {
+  if (userRole === null) {
     return <Login onLogin={handleLogin} />;
   }
 
   return (
     <div className="App">
-      <RegistrarIncidencia onRegistrar={handleRegistrarIncidencia} />
-      <VerIncidencias />
+      <PantallaPrincipal userRole={userRole} onLogout={handleLogout} />
     </div>
   );
 }

@@ -5,18 +5,7 @@ import datos from './incidencias.json';
 const VerIncidencias = () => {
   return (
     <div className="container mt-4">
-      {/*Header*/}
-      <header className="bg-dark text-white text-center">
-        <h1>Proyecto Equipo</h1>
-        <p>Bienvenido a la página de incidencias. Aquí observarás un listado</p>
-      </header>
-
-      {/* Botones con las clases, primary es azul success verde y danger rojo*/}
-      <div className="text-center mb-4">
-        <button className="btn btn-primary">Ver incidencias</button>
-        <button className="btn btn-success">Registrar incidencia</button>
-        <button className="btn btn-danger">Cerrar sesión</button>
-      </div>
+      
 
       {/* Tabla*/}
       <table className="table table-hover">
