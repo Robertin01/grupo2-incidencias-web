@@ -9,7 +9,7 @@ function AppContent() {
   const { usuarioLogin } = useContext(AuthContext);
   const [vistaRegistro, setVistaRegistro] = useState(false);
 
-  // Si el usuario está logueado, va directo a la principal
+  
   if (usuarioLogin) {
     return (
       <div className="App">
@@ -18,7 +18,6 @@ function AppContent() {
     );
   }
 
-  // Si no está logueado, alternamos entre Login y Registro
   return vistaRegistro ? (
     <Registro volver={() => setVistaRegistro(false)} />
   ) : (

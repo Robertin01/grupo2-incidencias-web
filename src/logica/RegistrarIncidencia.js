@@ -22,8 +22,6 @@ function RegistrarIncidencia() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // Construimos el objeto exacto que se guardará en db.json
         const nuevaIncidencia = {
             titulo: incidencia.titulo,
             descripcion: incidencia.descripcion,
@@ -32,7 +30,7 @@ function RegistrarIncidencia() {
             ubicacion: incidencia.ubicacion,
             estado: "Abierta",
             fecha: new Date().toLocaleDateString('es-ES'),
-            userId: usuarioLogin.email // Esto es lo que usaremos para filtrar
+            userId: usuarioLogin.email
         };
 
         try {
@@ -44,7 +42,6 @@ function RegistrarIncidencia() {
 
             if (respuesta.ok) {
                 alert('Incidencia guardada correctamente');
-                // Limpiar el formulario
                 setIncidencia({
                     titulo: '',
                     descripcion: '',

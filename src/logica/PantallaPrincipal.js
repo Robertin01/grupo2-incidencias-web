@@ -7,7 +7,6 @@ export default function PantallaPrincipal() {
     const { usuarioLogin, logout } = useContext(AuthContext);
     const [vista, setVista] = useState('inicio'); 
     
-    // Verificamos si es administrador
     const isAdmin = usuarioLogin?.rol === 'admin';
 
     return (

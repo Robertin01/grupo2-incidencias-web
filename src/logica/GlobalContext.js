@@ -5,7 +5,6 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
     const [usuarioLogin, setUsuarioLogin] = useState(null);
 
-    // PERSISTENCIA: Al cargar la app, miramos si hay un usuario en el localStorage
     useEffect(() => {
         const usuarioGuardado = localStorage.getItem("usuario_sesion");
         if (usuarioGuardado) {
@@ -43,7 +42,6 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    // NUEVA FUNCIÓN DE REGISTRO
     const registrar = async (email, password, rol) => {
         try {
             const respuesta = await fetch("http://localhost:4000/register", {

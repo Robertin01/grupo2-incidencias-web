@@ -11,7 +11,7 @@ function Registro({ volver }) {
         e.preventDefault();
         const exito = await registrar(email, password, rol);
         if (exito) {
-            volver(); // Si se crea bien, volvemos a la pantalla de Login
+            volver(); 
         }
     };
 

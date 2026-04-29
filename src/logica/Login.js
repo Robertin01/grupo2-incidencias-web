@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import './Login.css';
 import { AuthContext } from './GlobalContext';
 
-function Login({ irARegistro }) { // Recibimos la función para cambiar de vista
+function Login({ irARegistro }) { 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { login } = useContext(AuthContext);
