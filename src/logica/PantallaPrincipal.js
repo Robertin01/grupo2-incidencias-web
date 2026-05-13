@@ -1,12 +1,13 @@
 import React, { useState, useContext } from 'react';
 import VerIncidencias from '../listadoincidencias/VerIncidencias';
 import RegistrarIncidencia from './RegistrarIncidencia';
+import GestionUsuarios from './GestionUsuarios';
 import { AuthContext } from './GlobalContext';
 
 export default function PantallaPrincipal() {
     const { usuarioLogin, logout } = useContext(AuthContext);
-    const [vista, setVista] = useState('inicio'); 
-    
+    const [vista, setVista] = useState('inicio');
+
     const isAdmin = usuarioLogin?.rol === 'admin';
 
     return (
@@ -39,15 +40,9 @@ export default function PantallaPrincipal() {
                         <h3>Bienvenido. Selecciona una opción del menú.</h3>
                     </div>
                 )}
-                
-                {vista === 'ver' && <VerIncidencias userRole={usuarioLogin?.rol} />}
+                {vista === 'ver' && <VerIncidencias />}
                 {vista === 'reg' && <RegistrarIncidencia />}
-                {vista === 'gestion' && isAdmin && (
-                    <div className="card p-4 shadow">
-                        <h2>Panel de Administración</h2>
-                        <p>Solo visible para administradores.</p>
-                    </div>
-                )}
+                {vista === 'gestion' && isAdmin && <GestionUsuarios />}
             </div>
         </div>
     );

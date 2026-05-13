@@ -27,14 +27,15 @@ export const AuthProvider = ({ children }) => {
             const datos = await respuesta.json();
 
             const usuarioConfigurado = {
+                id: datos.user.id,
                 email: datos.user.email,
                 rol: datos.user.rol,
-                token: datos.accessToken 
+                token: datos.accessToken
             };
 
             setUsuarioLogin(usuarioConfigurado);
             localStorage.setItem("usuario_sesion", JSON.stringify(usuarioConfigurado));
-            
+
             return true;
         } catch (error) {
             alert(error.message);

@@ -30,7 +30,7 @@ function RegistrarIncidencia() {
             ubicacion: incidencia.ubicacion,
             estado: "Abierta",
             fecha: new Date().toLocaleDateString('es-ES'),
-            userId: usuarioLogin.email
+            userId: usuarioLogin.id
         };
 
         try {
@@ -63,7 +63,7 @@ function RegistrarIncidencia() {
             <div className="registrar-incidencia-card">
                 <h1 className="titulo-formulario">Nueva Incidencia</h1>
                 <p className="text-muted text-center">Registrando como: {usuarioLogin.email}</p>
-                
+
                 <form onSubmit={handleSubmit} className="formulario-incidencia">
                     <div className="campo">
                         <label>Título</label>

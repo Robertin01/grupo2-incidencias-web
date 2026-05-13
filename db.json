@@ -1,46 +1,23 @@
 {
   "users": [
     {
-      "email": "admin@iesgijon.es",
-      "password": "$2a$10$boLkGeGrZ7OOy3mQS0L.XO0AI9CS5yW5J8lqiETxr/azNj2M475NK",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$xBaXXkuTaYaakSgZjQU1w.VApZOgW6cGb8cSrFMTk08wZhukH1GSS",
       "rol": "admin",
       "id": 1
     },
     {
-      "email": "lucas@iesgijon.es",
-      "password": "$2a$10$zNdRYOzHufoy0ZRIH5ndc.pr3jDxFb1CUav2puN02Anflet7yerfG",
-      "rol": "comun",
+      "email": "lucas@gmail.com",
+      "password": "$2a$10$GI.nZ.eizI5FVmyA5p.doe1cG1Fy9RsVTpi9ow/fWSUOe.UucHNG2",
+      "rol": "admin",
       "id": 2
     },
     {
-      "email": "sergio@iesn1.com",
-      "password": "$2a$10$CwFA6dlPUSMdBlTrJLVjKeyHclewB7efthc588rbELx8ZoDueVnki",
+      "email": "lucas2@gmail.com",
+      "password": "$2a$10$3o2jtRvSgxTOruxBc7hhO.uhk4IHevs8MGxfTYA25B9H3vMnxX6Zm",
       "rol": "comun",
       "id": 3
     }
   ],
-  "incidencias": [
-    {
-      "titulo": "Teclado roto",
-      "descripcion": "Muy roto",
-      "categoria": "Hardware",
-      "urgencia": "Normal",
-      "ubicacion": "Instituto",
-      "estado": "Abierta",
-      "fecha": "29/4/2026",
-      "userId": "lucas@iesgijon.es",
-      "id": 1
-    },
-    {
-      "titulo": "Pantalla rota",
-      "descripcion": "Muy rota ",
-      "categoria": "Hardware",
-      "urgencia": "Baja",
-      "ubicacion": "Instituto",
-      "estado": "Abierta",
-      "fecha": "29/4/2026",
-      "userId": "lucas@iesgijon.es",
-      "id": 2
-    }
-  ]
+  "incidencias": []
 }
